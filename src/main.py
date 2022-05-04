@@ -11,8 +11,8 @@ from dotenv import load_dotenv
 
 
 load_dotenv()
-decrypt_key = os.getenv("DECRYPT_KEY")
-encrypt_key = os.getenv("ENCRYPT_KEY")
+decrypt_key = os.getenv("DECRYPT_KEY").encode()
+encrypt_key = os.getenv("ENCRYPT_KEY").encode()
 
 decryptor = Fernet(decrypt_key)
 encryptor = Fernet(encrypt_key)
@@ -22,8 +22,10 @@ app = FastAPI()
 @app.post("/activate/")
 async def activate(request: Request):
     data = await request.json()
-    code = encryptor.encrypt(decryptor.decrypt(data['code']))
-    return code
+    encrypted_code_in = data['code'].encode()
+    code = decryptor.decrypt(encrypted_code_in)
+    encrypted_code_out = encryptor.encrypt(code).decode()
+    return {'code': encrypted_code_out}
 
 if __name__ == "__main__":
     
