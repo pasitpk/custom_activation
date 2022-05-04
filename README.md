@@ -30,14 +30,3 @@ else:
   print('Activation failed')
 
 ```
-## example of .env
-```env
-HOST=0.0.0.0
-PORT=9898
-SSL_KEYFILE=
-SSL_CERTFILE=
-SSL_KEYFILE_PASSWORD=
-WORKERS=1
-DECRYPT_KEY="JmixbxpEWqqKKpA_xAdmhYFH1c7s_ZkMjK89JKO1mmY="
-ENCRYPT_KEY="KxMEvdmQQ7bJhH2YaNHm2Cjkbi65eDjvmJ9trTJhcaM="
-```
