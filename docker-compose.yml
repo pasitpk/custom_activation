@@ -1,0 +1,11 @@
+version: "3"
+   
+services:
+  custom-activation:
+    restart: always
+    build: .
+    container_name: custom-activation
+    command: bash run.sh
+    volumes:
+      - .:/custom-activation
+    network_mode: host
