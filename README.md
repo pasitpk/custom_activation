@@ -25,7 +25,7 @@ def activate():
   return False
   
 if activate():
-  print('Successfully activate')
+  print('Successfully activated')
   """
   For model encryption and decryption, please refer to 'https://colab.research.google.com/drive/17gU3n5yKciO5tVcESZCU3bHOtAlHXqV-?usp=sharing'
   """
@@ -34,3 +34,6 @@ else:
   print('Activation failed')
 
 ```
+
+## model encryption & decryption
+For model encryption and decryption, please refer to <a href="https://colab.research.google.com/drive/17gU3n5yKciO5tVcESZCU3bHOtAlHXqV-?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
