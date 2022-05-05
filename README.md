@@ -26,6 +26,10 @@ def activate():
   
 if activate():
   print('Successfully activate')
+  """
+  For model encryption and decryption, please refer to 'https://colab.research.google.com/drive/17gU3n5yKciO5tVcESZCU3bHOtAlHXqV-?usp=sharing'
+  """
+  # model = onnxruntime.InferenceSession(decrypt_file(encrypted_model_file, model_decrypt_key))
 else:
   print('Activation failed')
 
