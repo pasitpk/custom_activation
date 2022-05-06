@@ -1,7 +1,7 @@
 version: "3"
    
 services:
-  custom-activation:
+  custom-activation-rsa:
     restart: always
     build: .
     container_name: custom-activation-rsa
