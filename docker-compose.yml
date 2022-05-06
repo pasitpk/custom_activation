@@ -4,7 +4,7 @@ services:
   custom-activation:
     restart: always
     build: .
-    container_name: custom-activation
+    container_name: custom-activation-rsa
     command: bash run.sh
     volumes:
       - .:/custom-activation
